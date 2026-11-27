@@ -1,3 +1,5 @@
+require('dotenv').config();
+const connectDB=require('./config/database');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -9,6 +11,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+//connect to mongoDB
+connectDB();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
