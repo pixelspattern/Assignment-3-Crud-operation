@@ -1,0 +1,12 @@
+<%-include('../partials/header')%>
+<h1>Assignment</h1>
+
+<%if (assignments.length===0){%>
+    <p>No assignments yet</p>
+<%}else{%>
+    <%assignments.forEach(function(a){%>
+    <!--print title, ocurse etc-->
+    <%});%>
+<%}%>
+
+<%-include('../partials/footer')%>
